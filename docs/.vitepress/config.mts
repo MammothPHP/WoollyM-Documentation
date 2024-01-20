@@ -6,7 +6,7 @@ export default defineConfig({
   description: "Documentation of the WoollyM project",
 
   sitemap: {
-    hostname: 'https://www.woollym.io'
+    hostname: 'https://woollym.dev'
   },
 
   themeConfig: {

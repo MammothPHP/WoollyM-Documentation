@@ -1,5 +1,9 @@
 # Aggregate stats functions
+
+## Natively provided
+::: info
 _(non-exhaustive documentation)_
+:::
 
 ```php
 $stmt = $df->selectAll();
