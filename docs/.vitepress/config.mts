@@ -52,6 +52,8 @@ export default defineConfig({
       ],
 
     '/Manual/': [
+      {text: '<strong>Getting Started</strong>', link: '/Getting_Started/'},
+
       {
         text: 'Manual',
         link: '/Manual/',
@@ -61,12 +63,12 @@ export default defineConfig({
 
           {text: 'The Dataframe object', link: '/Manual/Dataframe_Object'},
 
-          {text: 'Basic CRUD Operations', link: '/Manual/Basic_CRUD_Operations/Principles', items:[
-            {text: 'Principles', link: '/Manual//Basic_CRUD_Operations/Principles'},
-            {text: 'Select', link: '/Manual//Basic_CRUD_Operations/Select'},
-            {text: 'Insert', link: '/Manual//Basic_CRUD_Operations/Insert'},
-            {text: 'Update', link: '/Manual//Basic_CRUD_Operations/Update'},
-            {text: 'Delete', link: '/Manual//Basic_CRUD_Operations/Delete'},
+          {text: 'CRUD Operations', link: '/Manual/CRUD_Operations/Principles', items:[
+            {text: 'Principles', link: '/Manual//CRUD_Operations/Principles'},
+            {text: 'Select', link: '/Manual//CRUD_Operations/Select'},
+            {text: 'Insert', link: '/Manual//CRUD_Operations/Insert'},
+            {text: 'Update', link: '/Manual//CRUD_Operations/Update'},
+            {text: 'Delete', link: '/Manual//CRUD_Operations/Delete'},
           ]},
 
           {text: 'Extracts Operations', link: '/Manual/Extracts_operations'},
