@@ -2,6 +2,9 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
+title: WoollyM
+titleTemplate: The PHP DataFrames library for data manipulation and analysi
+
 hero:
   name: "WoollyM"
   text: "Documentation"
@@ -9,13 +12,14 @@ hero:
   image:
     src: https://raw.githubusercontent.com/MammothPHP/WoollyM/master/logos/woollym_logo.png
     alt: WoollyM logo
+
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Getting Started
+      link: /Getting_Started/
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: User Manual
+      link: /Manual/
 
 features:
   - title: Import & Export

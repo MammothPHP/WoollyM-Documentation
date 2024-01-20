@@ -5,6 +5,9 @@ export default defineConfig({
   title: "WoollyM",
   description: "Documentation of the WoollyM project",
   themeConfig: {
+
+    search: {provider: 'local'},
+
     logo: 'https://raw.githubusercontent.com/MammothPHP/WoollyM/master/logos/woollym_logo.png',
 
     // https://vitepress.dev/reference/default-theme-config
@@ -13,7 +16,7 @@ export default defineConfig({
       { text: 'Getting Started', link: '/Getting_Started/Installation' },
       { text: 'Manual', link: '/Manual/' },
       { text: 'API Reference', link: '/Reference/' },
-      { text: 'Release Note', link: '/' }
+      { text: 'Release Note', link: 'https://github.com/MammothPHP/WoollyM/blob/master/CHANGELOG.md' }
     ],
 
     sidebar: {
