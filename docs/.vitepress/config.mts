@@ -46,6 +46,9 @@ export default defineConfig({
               {text: 'PDO SQL', link: '/Getting_Started/WorkingWithExternalsFormats/PDOSql'},
             ]},
         ]},
+
+        {text: '<strong>Next: Read the Manual</strong>', link: '/Manual/'},
+
       ],
 
     '/Manual/': [
