@@ -20,7 +20,7 @@ $df = new DataFrame($arr);
 ## Import or export from/to an external source
 Import (or export) from various sources including CSV, Excel, Json etc.
 
-> [Import / Export modules documentation and examples](/Manual/WorkingWithExternalsFormats/)
+> [Import / Export modules documentation and examples](/Getting_Started/WorkingWithExternalsFormats/)
 
 ## Extracting the underlying two-dimensional array
 
