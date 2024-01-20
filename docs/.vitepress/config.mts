@@ -4,6 +4,11 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "WoollyM",
   description: "Documentation of the WoollyM project",
+
+  sitemap: {
+    hostname: 'https://www.woollym.io'
+  },
+
   themeConfig: {
 
     search: {provider: 'local'},
