@@ -27,6 +27,8 @@ export default defineConfig({
     sidebar: {
       '/Getting_Started/': [
 
+        {text: 'License', link: '/Getting_Started/License'},
+
         {
           text: 'Getting Started',
           items: [
