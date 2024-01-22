@@ -9,11 +9,21 @@ export default defineConfig({
     hostname: 'https://woollym.dev'
   },
 
+  head: [
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/woollym-favicon-color.svg' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/woollym-favicon-color.png' }],
+    ['meta', { name: 'og:type', content: 'website' }],
+    ['meta', { name: 'og:locale', content: 'en' }],
+    ['meta', { name: 'og:site_name', content: 'WoollyM Documentation' }],
+    ['meta', { name: 'og:image', content: 'https://vitepress.dev/vitepress-og.jpg' }],
+    ['script', { src: 'https://cdn.usefathom.com/script.js', 'data-site': 'AZBRSFGG', 'data-spa': 'auto', defer: '' }]
+  ],
+
   themeConfig: {
 
     search: {provider: 'local'},
 
-    logo: 'https://raw.githubusercontent.com/MammothPHP/WoollyM/master/logos/woollym_logo.png',
+    logo: '/woollym_logo.svg',
 
     // https://vitepress.dev/reference/default-theme-config
     nav: [

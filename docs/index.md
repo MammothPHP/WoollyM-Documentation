@@ -10,7 +10,7 @@ hero:
   text: "Documentation"
   tagline: The PHP DataFrames library for data manipulation and analysis
   image:
-    src: https://raw.githubusercontent.com/MammothPHP/WoollyM/master/logos/woollym_logo.png
+    src: /woollym_logo.svg
     alt: WoollyM logo
 
   actions:
