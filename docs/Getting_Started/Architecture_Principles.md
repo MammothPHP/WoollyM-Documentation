@@ -1,4 +1,5 @@
-# Note on architecture
+# Architecture principles
+
 - Woolly is extendable, or at least he was trying to get used to the idea.
 - Data are stored in `data-drivers` that are modules. Currently Woolly offer 2 natives drivers _(the default PhpArray and PdoSql)_ but you can create your own _(without fork)_. Drivers can limit some functionnality but they don't change the public API.
 - Statements aggregate function _(like sum, count, max...)_ are modules, most current as offer natively, but you can had your own _(without fork)_

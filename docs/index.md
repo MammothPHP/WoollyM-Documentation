@@ -16,7 +16,7 @@ hero:
   actions:
     - theme: brand
       text: Getting Started
-      link: /Getting_Started/Presentation
+      link: /Getting_Started/
     - theme: alt
       text: User Manual
       link: /Manual/

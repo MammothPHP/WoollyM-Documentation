@@ -18,7 +18,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Getting Started', link: '/Getting_Started/Presentation' },
+      { text: 'Getting Started', link: '/Getting_Started/' },
       { text: 'Manual', link: '/Manual/' },
       { text: 'API Reference', link: '/Reference/' },
       { text: 'Release Note', link: 'https://github.com/MammothPHP/WoollyM/blob/master/CHANGELOG.md' }
@@ -32,7 +32,7 @@ export default defineConfig({
         {
           text: 'Getting Started',
           items: [
-            {text: 'Presentation', link: '/Getting_Started/Presentation'},
+            {text: 'Presentation', link: '/Getting_Started/'},
             {text: 'Requirements', link: '/Getting_Started/Requirements'},
             {text: 'Installation', link: '/Getting_Started/Installation'},
             {text: 'Architecture Principles', link: '/Getting_Started/Architecture_Principles'},

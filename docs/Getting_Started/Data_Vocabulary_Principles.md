@@ -1,4 +1,4 @@
-# Principles
+# Data vocabulary & principles
 
 - A `Record` is similar to a line in a spreadsheet.
     - A `Record` can contain from none _(empty record)_ to several `Columns`.
