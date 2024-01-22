@@ -1,7 +1,6 @@
 # Types Data
-::: warning
-Type's system is unsatisfactory and will certainly be totally rethought in the future.
-:::
+> [!WARNING]
+> Type's system is unsatisfactory and will certainly be totally rethought in the future.
 
 Two ways:
 1. Converts pre-existing data once only 

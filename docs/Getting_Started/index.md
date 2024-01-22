@@ -1,8 +1,7 @@
 # Presentation
 
-::: danger
-This project is currently at an experimental stage. Production use is not recommended. APIs and functionalities are subject to change at any time without notice. Documentation is still deficient. Help and feedback are most welcome.
-:::
+>[!CAUTION]
+>This project is currently at an experimental stage. Production use is not recommended. APIs and functionalities are subject to change at any time without notice. Documentation is still deficient. Help and feedback are most welcome.
 
 WoollyM is a PHP library for data analysis. It can be used to represent tabular data from various sources (CSV, database, JSON, Excel...). The unified API can then be used easily to browse, analyze, modify, and export data in a variety of formats, we try to provide a very playful, modern, expressive, and user-friendly interface. This API is also modular and extensible, so you can easily add your own calculation and exploration methods.
 

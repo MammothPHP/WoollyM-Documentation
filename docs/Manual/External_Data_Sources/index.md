@@ -1,7 +1,6 @@
 # Use Data Driver to explore external sources or to overcome technical limitations on major datasets
-::: warning
-Non-default data drivers are still highly experimental and unfinished. The drivers interface and API will also be modified.
-:::
+> [!WARNING]
+> Non-default data drivers are still highly experimental and unfinished. The drivers interface and API will also be modified.
 
 ## Natively provided drivers
 |Driver|Comment|Memory Usage|Perf. (write access)|Perf. (random access)|Perf. (mass read)|Aggregate Functions
