@@ -60,7 +60,6 @@ $stmt = $df->selectAll()->whereKeyBetween(1, 42);
 
 
 ### Statements are Traversable
-
 ```php
 foreach($df->selectAll()->where(fn($r) => $r) as $recordKey => $recordArray) {
     // ...
