@@ -66,3 +66,38 @@ foreach($df->selectAll()->where(fn($r) => $r) as $recordKey => $recordArray) {
     // ...
 }
 ```
+
+### Reset a statement
+
+#### Reset columns selection
+```php
+$stmt = $df->select('colA');
+
+$stmt->resetSelect();
+$stmt->select('colB');
+```
+
+Or directly:
+
+```php
+$stmt->replaceSelect('colB');
+```
+
+#### Reset where clauses & limit
+```php
+$stmt = $df->select('colA')->where(...)->limit(20)->offset(7);
+
+$stmt->resetWhere();
+$stmt->resetLimit();
+$stmt->resetOffset();
+```
+
+#### Reset everything
+Reset directly selection, where clauses, limit and offset.
+
+```php
+$stmt = $df->select('colA')->where(...)->limit(20)->offset(7);
+
+$stmt->reset();
+```
+
