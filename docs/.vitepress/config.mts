@@ -9,6 +9,8 @@ export default defineConfig({
     hostname: 'https://woollym.dev'
   },
 
+  cleanUrls: true,
+
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/woollym-favicon-color.svg' }],
     ['link', { rel: 'icon', type: 'image/png', href: '/woollym-favicon-color.png' }],
