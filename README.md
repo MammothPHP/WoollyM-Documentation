@@ -1,3 +1,6 @@
 Initiated separated documentation for WoollyM project.
 
-Not ready yet.
+## Run DEV server
+```shell
+npm run docs:dev
+```
