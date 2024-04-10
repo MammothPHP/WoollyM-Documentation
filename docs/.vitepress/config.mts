@@ -98,7 +98,7 @@ export default defineConfig({
             {text: 'Delete', link: '/Manual//CRUD_Operations/Delete'},
           ]},
 
-          {text: 'Extracts Operations', link: '/Manual/Extracts_operations'},
+          {text: 'Extracts Operations', link: '/Manual/Extracts_Operations'},
 
           {text: 'Statistical Aggregation Functions', link: '/Manual/Statistical_Aggregation_Functions/Natives_Functions', items:[
             {text: 'Natives Functions', link: '/Manual/Statistical_Aggregation_Functions/Natives_Functions'},

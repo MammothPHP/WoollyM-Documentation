@@ -1,6 +1,6 @@
 # Extract
 > [!WARNING]
-> Extract operations are not yet well optimized about memory consumption. Some of them have the potential to do so significantly in the future; others won't really be able to.
+> Extract operations are not yet well optimized about memory consumption. Some of them have the potential to do significantly more in the future, but others won't really be able to.
 
  The `Extract` object offers an API to return a NEW DataFrame without modifying anything from the original DataFrame. It's also possible to export a Select object to a new DataFrame, but Extract API also offer transformations methods.
 
