@@ -23,14 +23,14 @@ hero:
 
 features:
   - title: Import & Export
-    details: Woolly supports import and export from various sources like Excel, Json or SQL query (PDO).
+    details: Woolly supports import and export from/to various sources like Excel, Json or SQL <em>(PDO)</em>.
   - title: Data access & Manipulation
     details: Access and manipulate data through a nice high-level API inspired by SQL and human language. 
   - title: Data analysis
     details: Get filtered and grouped aggregates calculations on your data in an easy and optimized way.
   - title: Work directly on external data
-    details: Work in memory, or directly and transparently interact with external data through the use of drivers. Woolly provides a native SQL PDO driver.
+    details: Work in memory, or transparently interact with external data through the use of drivers. A native SQL PDO driver is provided.
   - title: Extensible
-    details: Create your own aggregated metrics. Use your own drivers for accessing external data. Support extends WoollyM classes <em>(no more final)</em>.
+    details: "Create your own aggregated metrics. Use your own drivers for accessing external data. <br><em>No more final</em>: extending the Woolly classes is allowed."
 ---
 
