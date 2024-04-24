@@ -10,6 +10,7 @@ export default defineConfig({
   },
 
   cleanUrls: true,
+  ignoreDeadLinks: [/\/ArrayAccess/, /\/Iterator/, /\/Countable/, /\/Exception/, /\/Stringable/, /\/API_Reference\/.+/, /\/XLSX/, /\/CSV/, /\/Statement/, /\/StatsInterface/, /\/DataFrameException/],
 
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/woollym-favicon-color.svg' }],
