@@ -39,12 +39,14 @@ export default defineConfig({
 
     logo: '/woollym_logo.svg',
 
+    outline: {level: 'deep'},
+
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Getting Started', link: '/Getting_Started/' },
       { text: 'Manual', link: '/Manual/' },
-      { text: 'API Reference', link: '/Reference/' },
+      { text: 'API Reference', link: '/API_Reference/' },
       { text: 'Release Note', link: 'https://github.com/MammothPHP/WoollyM/blob/master/CHANGELOG.md' }
     ],
 

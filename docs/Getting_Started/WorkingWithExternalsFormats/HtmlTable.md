@@ -3,7 +3,7 @@
 use MammothPHP\WoollyM\IO\HTML;
 ```
 
-## Get an HTML table:
+## Get an HTML table
 
 ```php
 HTML::fromDataFrame($df)->toString(
