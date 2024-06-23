@@ -4,8 +4,8 @@ _Sorting can be incompatible with some drivers. And some of them could be accele
 ## sortRecordsByColumns
 Sort record ascending / descing by column(s).
 ```php
-$df->sortRecordByColumns(by: 'colA', ascending: true);
-$df->sortRecordByColumns(by: ['colA', 'colB'], ascending: true); // By colA then colB
+$df->sortRecordsByColumns(by: 'colA', ascending: true);
+$df->sortRecordsByColumns(by: ['colA', 'colB'], ascending: true); // By colA then colB
 ```
 
 ## sortColumn
