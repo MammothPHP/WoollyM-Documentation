@@ -51,6 +51,11 @@ export default defineConfig({
       { text: 'Release Note', link: 'https://github.com/MammothPHP/WoollyM/blob/master/CHANGELOG.md' }
     ],
 
+    footer: {
+      message: 'Released under the BSD 3-Clause License.',
+      copyright: 'Copyright © 2024-present Julien Boudry'
+    },
+
     sidebar: {
       '/Getting_Started/': [
 
