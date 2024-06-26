@@ -24,7 +24,7 @@ The `Select` object represents a statement to explore au subset of data correspo
 ```php
 $df->select('colA', 'colB'): Select // Return Select
 $df->selectAll(): SelectAll // With all columns, and keep the  selection in returned select object even if columns are aded or deleted to the dataframe.
-$df->col('colA'): ColunRepresentation // A classic select with extra methods to rename, remove, clone, type the selected column.
+$df->col('colA'): ColumnRepresentation // A classic select with extra methods to rename, remove, clone, type the selected column.
 ```
 
 ### Extract from a Select Statement
