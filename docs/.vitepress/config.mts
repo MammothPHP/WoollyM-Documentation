@@ -109,8 +109,9 @@ export default defineConfig({
           {text: 'Extracts Operations', link: '/Manual/Extracts_Operations'},
 
           {text: 'Statistical Aggregation Functions', link: '/Manual/Statistical_Aggregation_Functions/Natives_Functions', items:[
+            {text: 'Principles', link: '/Manual/Statistical_Aggregation_Functions/Principles'},
             {text: 'Natives Functions', link: '/Manual/Statistical_Aggregation_Functions/Natives_Functions'},
-            {text: 'Customized Functions', link: '/Manual/Statistical_Aggregation_Functions/Customized_Functions'},
+            {text: 'User Functions', link: '/Manual/Statistical_Aggregation_Functions/User_Functions'},
           ]},
 
           {text: 'Sorting Data', link: '/Manual/Sorting_Data'},
