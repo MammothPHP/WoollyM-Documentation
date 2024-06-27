@@ -47,5 +47,5 @@ $df = new DataFrame([
     ['colA' => 77, 'colB' => 7 , 'colC' => 8],
 ]);
 
-$df->select('colA', 'colC')->whereColumnEqual('colA', 42)->size(); // 2
+$df->select('colA', 'colC')->whereColumn('colA', equal: 42)->size(); // 2
 ```

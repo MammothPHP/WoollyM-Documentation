@@ -31,7 +31,7 @@ $df->col('colA'): ColumnRepresentation // A classic select with extra methods to
 
 Return the result as a new DataFrame object:
 ```php
-$newDf = $df->select('colA','colC')->whereColumnEqual('colB', 42)->export();
+$newDf = $df->select('colA','colC')->whereColumn('colB', equal: 42)->export();
 ```
 
 Or directly to an array:

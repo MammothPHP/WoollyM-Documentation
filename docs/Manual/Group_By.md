@@ -17,7 +17,7 @@ $df->groupBy('city', 'district', Sum::col('population', as: 'totalPopulation'));
 
 ```php
 $groupedDf = $df->selectAll()
-                ->whereColumnEqual('country', 'FR')
+                ->whereColumn('country', equal: 'FR')
                 ->groupBy(  'city',
                             'district',
                             Sum::col('population', as: 'totalPopulation')

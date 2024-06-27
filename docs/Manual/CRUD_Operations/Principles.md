@@ -23,13 +23,13 @@ $df->delete()->record(key: 42); // Return $df (self)
 
 #### Statements basic usage examples
 ```php
-$stmt = $df->select('colNameA')->whereColumnEqual('colB', 42); // Return a new Select statement object
+$stmt = $df->select('colNameA')->whereColumn('colB', equal: 42); // Return a new Select statement object
 $stmt->toArray();
 
-$stmt = $df->update('colNameA')->whereColumnEqual('colB', 42); // Return a new Select statement object
+$stmt = $df->update('colNameA')->whereColumn('colB', equal: 42); // Return a new Select statement object
 $stmt->set(8); // Apply value '8' to column named 'colNameA' where column B equal to 42
 
-$df->delete()->whereColumnEqual('colA', 'foo')->execute(); // Return $df
+$df->delete()->whereColumn('colA', 'foo')->execute(); // Return $df
 ```
 
 ### Filter & Limit the Select statements
@@ -54,7 +54,7 @@ WHERE contition AND (condition OR condition OR condition) AND condition
 
 Simpler Where clause
 ```php
-$stmt = $df->selectAll()->whereColumnEqual('colA', 42);
+$stmt = $df->selectAll()->whereColumn('colA', 42);
 $stmt = $df->selectAll()->whereKeyBetween(1, 42);
 ```
 

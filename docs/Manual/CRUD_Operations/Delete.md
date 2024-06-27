@@ -24,7 +24,7 @@ $df->delete()->filter(fn(array $record, int $position): bool => $position === 42
     ]);
     
     $df->delete()
-        ->whereColumnEqual('colB', 5)
+        ->whereColumn('colB', equal: 5)
         ->or(fn (array $record): bool => $record['colA'] >= 10)
         ->execute();
 
