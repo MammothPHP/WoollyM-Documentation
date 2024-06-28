@@ -55,6 +55,8 @@ WHERE contition AND (condition OR condition OR condition) AND condition
 Simpler Where clause
 ```php
 $stmt = $df->selectAll()->whereColumn('colA', equal: 42);
+$stmt = $df->selectAll()->whereColumn('composer name', contain: 'Strauss');
+$stmt = $df->selectAll()->whereColumn('composer name', match: '/strauss/mi');
 $stmt = $df->selectAll()->whereKeyBetween(1, 42);
 ```
 
