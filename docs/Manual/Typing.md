@@ -2,6 +2,8 @@
 > [!WARNING]
 > Type's system is unsatisfactory and will certainly be totally rethought in the future.
 
+> Understood first [the structure and types](/Getting_Started/DataType)
+
 Two ways:
 1. Converts pre-existing data once only 
 2. Converts pre-existing data and forces the type of future data

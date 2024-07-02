@@ -65,11 +65,10 @@ export default defineConfig({
           text: 'Getting Started',
           items: [
             {text: 'Presentation', link: '/Getting_Started/'},
-            {text: 'Requirements', link: '/Getting_Started/Requirements'},
             {text: 'Installation', link: '/Getting_Started/Installation'},
-            {text: 'Architecture Principles', link: '/Getting_Started/Architecture_Principles'},
-            {text: 'Data Vocabulary & Principles', link: '/Getting_Started/Data_Vocabulary_Principles'},
+            {text: 'Data Structure & Vocabulary', link: '/Getting_Started/Data_Structure_and_Vocabulary'},
             {text: 'Instanciation', link: '/Getting_Started/Instanciation'},
+            {text: 'Data Type', link: '/Getting_Started/DataType'},
 
             {text: 'Import / Export with formats', link: '/Getting_Started/WorkingWithExternalsFormats/', items:[
               {text: 'CSV / TSV', link: '/Getting_Started/WorkingWithExternalsFormats/CSV'},

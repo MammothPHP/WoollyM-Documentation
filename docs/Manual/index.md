@@ -4,7 +4,6 @@ The aim of this manual is to provide an overview of the features offered by Wool
 
 We recommend that you read the [Getting Started](/Getting_Started/) section first.
 And in particular the following pages, which are fundamental to understanding the underlying logic and instantiation:
-* [Architecture principles](/Getting_Started/Architecture_Principles)
-* [Data vocabulary & principles](/Getting_Started/Data_Vocabulary_Principles)
+* [Architecture principle & Vocabulary](/Getting_Started/Data_Structure_and_Vocabulary)
 * [Instanciation](/Getting_Started/Instanciation)
 
