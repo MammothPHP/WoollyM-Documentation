@@ -16,38 +16,46 @@ _These functionalities may be limited or change depending on the implementation 
 // Boucourechliev is an apatrid, and you never set the Nationality property for him. Not even by setting it to NULL.
 $df = DataFrame::fromArray([
   ['composer' => 'Debussy', 'Nationality' => 'french'],
-  ['composer' => 'Boucourechliev', 'Nationality' => null],
+  ['composer' => 'Boucourechliev'],
 ]);
 
 $df->toArray();
-[
+= [
   ['composer' => 'Debussy', 'Nationality' => 'french'],
   ['composer' => 'Boucourechliev'],
 ]
 
 $df->fillInNonExistentsCol = true; // default is false
 $df->toArray();
-[
+= [
   ['composer' => 'Debussy', 'Nationality' => 'french'],
   ['composer' => 'Boucourechliev', 'Nationality' => null],
 ]
 ```
 
-#### Explicit Null value
+#### Check is a specific record has column
 ```php
 // You specify an explicit null value
 $df = DataFrame::fromArray([
   ['composer' => 'Debussy', 'Nationality' => 'french'],
-  ['composer' => 'Boucourechliev', 'Nationality' => null],
+  ['composer' => 'Stravinsky', 'Nationality' => null],
+  ['composer' => 'Boucourechliev'],
 ]);
 
-$df->toArray();
-[
-  ['composer' => 'Debussy', 'Nationality' => 'french']
-  ['composer' => 'Boucourechliev', 'Nationality' => object NullValue],
-]
+$df->getRecord(key: 0)->hasColumn('Nationality');
+= true
 
-$df->toArray();
+$df->getRecord(key: 1)->hasColumn('Nationality');
+= true
+
+$df->getRecord(key: 2)->hasColumn('Nationality');
+= false
+
+$df->getRecord(key: 2)->toArray();
+= ['composer' => 'Boucourechliev'],
+
+$df->getRecord(key: 2)->toContextualArray();
+= ['composer' => 'Boucourechliev', 'Nationality' => null],
 ```
 
 ### Datetime datatype
