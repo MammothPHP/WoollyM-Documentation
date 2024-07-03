@@ -25,8 +25,7 @@ $df->toArray();
   ['composer' => 'Boucourechliev'],
 ]
 
-$df->fillInNonExistentsCol = true; // default is false
-$df->toArray();
+$df->toArray(fillInNonExistentCol: true);
 = [
   ['composer' => 'Debussy', 'Nationality' => 'french'],
   ['composer' => 'Boucourechliev', 'Nationality' => null],
