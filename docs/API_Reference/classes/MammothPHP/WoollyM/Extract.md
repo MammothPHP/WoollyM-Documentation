@@ -183,6 +183,90 @@ public fromSqlQuery(string $sql): \MammothPHP\WoollyM\DataFrame
 
 ***
 
+### groupBy
+
+
+
+```php
+public groupBy(string|\MammothPHP\WoollyM\Stats\AggProvider $args): \MammothPHP\WoollyM\DataFrame
+```
+
+
+
+
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$args` | **string&#124;\MammothPHP\WoollyM\Stats\AggProvider** |  |
+
+
+
+
 
 ***
-> Automatically generated on 2024-04-24
+
+
+## Inherited methods
+
+
+### setLinkedDataFrame
+
+
+
+```php
+protected setLinkedDataFrame(\MammothPHP\WoollyM\DataFrame $df): void
+```
+
+
+
+
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$df` | **\MammothPHP\WoollyM\DataFrame** |  |
+
+
+
+
+
+***
+
+### getLinkedDataFrame
+
+Get the Linked DataFrame object
+
+```php
+public getLinkedDataFrame(): \MammothPHP\WoollyM\DataFrame
+```
+
+
+
+
+
+
+
+
+
+
+
+**Throws:**
+
+- [`InvalidSelectException`](./Exceptions/InvalidSelectException.md)
+
+
+
+***
+
+
+***
+> Automatically generated on 2024-07-03

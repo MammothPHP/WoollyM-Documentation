@@ -7,7 +7,7 @@
 
 
 * Full name: `\MammothPHP\WoollyM\Stats\StatsMethodInterface`
-* Parent interfaces: [`StatsInterface`](./StatsInterface.md)
+* Parent interfaces: [`\MammothPHP\WoollyM\Stats\StatsInterface`](./StatsInterface.md)
 
 
 ## Methods
@@ -43,4 +43,4 @@ public executeMethod(\MammothPHP\WoollyM\Statements\Select\Select $column, array
 
 
 ***
-> Automatically generated on 2024-04-24
+> Automatically generated on 2024-07-03

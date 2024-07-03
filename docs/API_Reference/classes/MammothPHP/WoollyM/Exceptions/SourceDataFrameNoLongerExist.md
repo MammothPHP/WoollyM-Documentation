@@ -1,12 +1,12 @@
 ***
 
-# NotModifiedRecord
+# SourceDataFrameNoLongerExist
 
 
 
 
 
-* Full name: `\MammothPHP\WoollyM\Exceptions\NotModifiedRecord`
+* Full name: `\MammothPHP\WoollyM\Exceptions\SourceDataFrameNoLongerExist`
 * Parent class: [`Exception`](../../../Exception.md)
 
 

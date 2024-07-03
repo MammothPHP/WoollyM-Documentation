@@ -46,7 +46,7 @@ public record(array $recordArray): \MammothPHP\WoollyM\DataFrame
 Allows user to "array_merge" two DataFrames so that the rows of one are appended to the rows of current DataFrame object
 
 ```php
-public append( $iterable): \MammothPHP\WoollyM\DataFrame
+public append(mixed $iterable): \MammothPHP\WoollyM\DataFrame
 ```
 
 
@@ -60,7 +60,7 @@ public append( $iterable): \MammothPHP\WoollyM\DataFrame
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$iterable` | **** | - The one to add to the current. |
+| `$iterable` | **mixed** | - The one to add to the current. |
 
 
 
@@ -97,5 +97,62 @@ public setColumn(string $targetColumn, mixed $rightHandSide): self
 ***
 
 
+## Inherited methods
+
+
+### setLinkedDataFrame
+
+
+
+```php
+protected setLinkedDataFrame(\MammothPHP\WoollyM\DataFrame $df): void
+```
+
+
+
+
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$df` | **\MammothPHP\WoollyM\DataFrame** |  |
+
+
+
+
+
 ***
-> Automatically generated on 2024-04-24
+
+### getLinkedDataFrame
+
+Get the Linked DataFrame object
+
+```php
+public getLinkedDataFrame(): \MammothPHP\WoollyM\DataFrame
+```
+
+
+
+
+
+
+
+
+
+
+
+**Throws:**
+
+- [`InvalidSelectException`](../../Exceptions/InvalidSelectException.md)
+
+
+
+***
+
+
+***
+> Automatically generated on 2024-07-03

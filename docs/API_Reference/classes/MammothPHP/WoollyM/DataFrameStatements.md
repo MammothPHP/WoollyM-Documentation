@@ -127,48 +127,6 @@ public column(string $columnName): \MammothPHP\WoollyM\Statements\Select\ColumnR
 ## Inherited methods
 
 
-### toArray
-
-Outputs a DataFrame as a two-dimensional associative array.
-
-```php
-public toArray(): array
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### initDriverIterator
-
-
-
-```php
-protected initDriverIterator(): void
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
 ### insert
 
 
@@ -195,7 +153,7 @@ public insert(): \MammothPHP\WoollyM\Statements\Insert\Insert
 
 
 ```php
-public __construct(array&lt;int,array&gt; $data = [],  $dataDriver = null): mixed
+public __construct(array&lt;int,array&gt; $data = [], mixed $dataDriver = null): mixed
 ```
 
 
@@ -210,7 +168,7 @@ public __construct(array&lt;int,array&gt; $data = [],  $dataDriver = null): mixe
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `$data` | **array<int,array>** | Array data to ingest |
-| `$dataDriver` | **** | - Class of custom driver to use. if null, the PhpArray (in-memory) driver will used. |
+| `$dataDriver` | **mixed** | - Class of custom driver to use. if null, the PhpArray (in-memory) driver will used. |
 
 
 
@@ -644,6 +602,33 @@ public getRecord(int $key): array&lt;string,array&gt;
 
 ***
 
+### getRecordAsArray
+
+Get a record by key and return an array
+
+```php
+public getRecordAsArray(int $key): array&lt;string,array&gt;
+```
+
+
+
+
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$key` | **int** |  |
+
+
+
+
+
+***
+
 ### recordKeyExist
 
 Check if a record key exist
@@ -698,12 +683,12 @@ protected convertRecordToAbstract(array $recordArray): array
 
 ***
 
-### convertAbstractRecordToArray
+### convertAbstractToRecordObject
 
 
 
 ```php
-protected convertAbstractRecordToArray(array $abstractRecord): array
+protected convertAbstractToRecordObject(array $abstractRecord): \MammothPHP\WoollyM\Record
 ```
 
 
@@ -725,6 +710,81 @@ protected convertAbstractRecordToArray(array $abstractRecord): array
 
 ***
 
+### toArray
+
+Outputs a DataFrame as a two-dimensional associative array.
+
+```php
+public toArray(bool $fillInNonExistentCol = false): array
+```
+
+
+
+
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$fillInNonExistentCol` | **bool** |  |
+
+
+
+
 
 ***
-> Automatically generated on 2024-04-24
+
+### initDriverIterator
+
+
+
+```php
+protected initDriverIterator(): void
+```
+
+
+
+
+
+
+
+
+
+
+
+
+***
+
+### getRecordsAsArrayIterator
+
+
+
+```php
+public getRecordsAsArrayIterator(bool $fillAllColumn = false): \Iterator
+```
+
+
+
+
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$fillAllColumn` | **bool** |  |
+
+
+
+
+
+***
+
+
+***
+> Automatically generated on 2024-07-03

@@ -111,7 +111,7 @@ public update(): \MammothPHP\WoollyM\Statements\Update\Update
 Sort column order using a closure. Then retrieve records will respect the new order.
 
 ```php
-public sortColumns( $callback = null): static
+public sortColumns(mixed $callback = null): static
 ```
 
 
@@ -125,7 +125,7 @@ public sortColumns( $callback = null): static
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$callback` | **** | - If null, sort will be alphabetic. For closure, example fn(string $a, string $b): int =&gt; $a &lt;=&gt; $b; |
+| `$callback` | **mixed** | - If null, sort will be alphabetic. For closure, example fn(string $a, string $b): int =&gt; $a &lt;=&gt; $b; |
 
 
 
@@ -165,155 +165,6 @@ public sortRecordsByColumns(array|string $by, bool $ascending = true): static
 ## Inherited methods
 
 
-### select
-
-Return a Select object
-
-```php
-public select(string[] $selections): \MammothPHP\WoollyM\Statements\Select\Select
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$selections` | **string[]** | column(s) name(s) to select |
-
-
-
-
-
-***
-
-### selectAll
-
-Return a fixed selectAll object
-
-```php
-public selectAll(): \MammothPHP\WoollyM\Statements\Select\SelectAll
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### col
-
-Return a ColumnRepresentation object, extending Select object.
-
-```php
-public col(string $columnName): \MammothPHP\WoollyM\Statements\Select\ColumnRepresentation
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$columnName` | **string** |  |
-
-
-
-
-**Throws:**
-
-- [`InvalidSelectException`](./Exceptions/InvalidSelectException.md)
-
-
-
-***
-
-### column
-
-Alias for col() method.
-
-```php
-public column(string $columnName): \MammothPHP\WoollyM\Statements\Select\ColumnRepresentation
-```
-
-
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$columnName` | **string** |  |
-
-
-
-
-
-***
-
-### toArray
-
-Outputs a DataFrame as a two-dimensional associative array.
-
-```php
-public toArray(): array
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### initDriverIterator
-
-
-
-```php
-protected initDriverIterator(): void
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
 ### insert
 
 
@@ -340,7 +191,7 @@ public insert(): \MammothPHP\WoollyM\Statements\Insert\Insert
 
 
 ```php
-public __construct(array&lt;int,array&gt; $data = [],  $dataDriver = null): mixed
+public __construct(array&lt;int,array&gt; $data = [], mixed $dataDriver = null): mixed
 ```
 
 
@@ -355,7 +206,7 @@ public __construct(array&lt;int,array&gt; $data = [],  $dataDriver = null): mixe
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `$data` | **array<int,array>** | Array data to ingest |
-| `$dataDriver` | **** | - Class of custom driver to use. if null, the PhpArray (in-memory) driver will used. |
+| `$dataDriver` | **mixed** | - Class of custom driver to use. if null, the PhpArray (in-memory) driver will used. |
 
 
 
@@ -789,6 +640,33 @@ public getRecord(int $key): array&lt;string,array&gt;
 
 ***
 
+### getRecordAsArray
+
+Get a record by key and return an array
+
+```php
+public getRecordAsArray(int $key): array&lt;string,array&gt;
+```
+
+
+
+
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$key` | **int** |  |
+
+
+
+
+
+***
+
 ### recordKeyExist
 
 Check if a record key exist
@@ -843,12 +721,12 @@ protected convertRecordToAbstract(array $recordArray): array
 
 ***
 
-### convertAbstractRecordToArray
+### convertAbstractToRecordObject
 
 
 
 ```php
-protected convertAbstractRecordToArray(array $abstractRecord): array
+protected convertAbstractToRecordObject(array $abstractRecord): \MammothPHP\WoollyM\Record
 ```
 
 
@@ -870,6 +748,188 @@ protected convertAbstractRecordToArray(array $abstractRecord): array
 
 ***
 
+### toArray
+
+Outputs a DataFrame as a two-dimensional associative array.
+
+```php
+public toArray(bool $fillInNonExistentCol = false): array
+```
+
+
+
+
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$fillInNonExistentCol` | **bool** |  |
+
+
+
+
 
 ***
-> Automatically generated on 2024-04-24
+
+### initDriverIterator
+
+
+
+```php
+protected initDriverIterator(): void
+```
+
+
+
+
+
+
+
+
+
+
+
+
+***
+
+### getRecordsAsArrayIterator
+
+
+
+```php
+public getRecordsAsArrayIterator(bool $fillAllColumn = false): \Iterator
+```
+
+
+
+
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$fillAllColumn` | **bool** |  |
+
+
+
+
+
+***
+
+### select
+
+Return a Select object
+
+```php
+public select(string[] $selections): \MammothPHP\WoollyM\Statements\Select\Select
+```
+
+
+
+
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$selections` | **string[]** | column(s) name(s) to select |
+
+
+
+
+
+***
+
+### selectAll
+
+Return a fixed selectAll object
+
+```php
+public selectAll(): \MammothPHP\WoollyM\Statements\Select\SelectAll
+```
+
+
+
+
+
+
+
+
+
+
+
+
+***
+
+### col
+
+Return a ColumnRepresentation object, extending Select object.
+
+```php
+public col(string $columnName): \MammothPHP\WoollyM\Statements\Select\ColumnRepresentation
+```
+
+
+
+
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$columnName` | **string** |  |
+
+
+
+
+**Throws:**
+
+- [`InvalidSelectException`](./Exceptions/InvalidSelectException.md)
+
+
+
+***
+
+### column
+
+Alias for col() method.
+
+```php
+public column(string $columnName): \MammothPHP\WoollyM\Statements\Select\ColumnRepresentation
+```
+
+
+
+
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$columnName` | **string** |  |
+
+
+
+
+
+***
+
+
+***
+> Automatically generated on 2024-07-03

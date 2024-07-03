@@ -236,7 +236,7 @@ public toPDO(\PDO $pdo, string $tableName): void
 
 
 ```php
-public options( $chunkSize = 500,  $replace = false,  $ignore = false): static
+public options(mixed $chunkSize = 500, mixed $replace = false, mixed $ignore = false): static
 ```
 
 
@@ -250,9 +250,9 @@ public options( $chunkSize = 500,  $replace = false,  $ignore = false): static
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$chunkSize` | **** | - Insert chunk size |
-| `$replace` | **** | - Use a sql replace statement |
-| `$ignore` | **** | - Use a sql ignore statement |
+| `$chunkSize` | **mixed** | - Insert chunk size |
+| `$replace` | **mixed** | - Use a sql replace statement |
+| `$ignore` | **mixed** | - Use a sql ignore statement |
 
 
 
@@ -445,4 +445,4 @@ protected prepareToFileInput(mixed $file, bool $overwriteFile): \SplFileObject|f
 
 
 ***
-> Automatically generated on 2024-04-24
+> Automatically generated on 2024-07-03

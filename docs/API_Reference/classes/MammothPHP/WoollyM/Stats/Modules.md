@@ -86,7 +86,7 @@ protected static getModule(string $name, \MammothPHP\WoollyM\Stats\ModuleType $t
 
 
 ```php
-public static registerModule(\MammothPHP\WoollyM\Stats\StatsInterface $module): void
+public static registerModule(string $moduleClass): void
 ```
 
 
@@ -100,7 +100,7 @@ public static registerModule(\MammothPHP\WoollyM\Stats\StatsInterface $module): 
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$module` | **\MammothPHP\WoollyM\Stats\StatsInterface** |  |
+| `$moduleClass` | **string** |  |
 
 
 
@@ -137,4 +137,4 @@ public static removeModuleByMethod(string $method): void
 
 
 ***
-> Automatically generated on 2024-04-24
+> Automatically generated on 2024-07-03

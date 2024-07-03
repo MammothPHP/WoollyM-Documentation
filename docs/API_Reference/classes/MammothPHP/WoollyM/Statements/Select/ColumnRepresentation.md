@@ -276,7 +276,7 @@ public rename(string $to): self
 Set a value or apply a closure to all value selected.
 
 ```php
-public set( $set): self
+public set(mixed $set): self
 ```
 
 
@@ -290,7 +290,7 @@ public set( $set): self
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$set` | **** | - The value to set or the closure to apply. |
+| `$set` | **mixed** | - The value to set or the closure to apply. |
 
 
 
@@ -310,7 +310,7 @@ public set( $set): self
 Merge DataFrame to the column value from the beginning.
 
 ```php
-private setDataFrame( $df): void
+private setDataFrame(mixed $df): void
 ```
 
 
@@ -324,7 +324,7 @@ private setDataFrame( $df): void
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$df` | **** | - Single column dataFrame |
+| `$df` | **mixed** | - Single column dataFrame |
 
 
 
@@ -412,7 +412,7 @@ public setColumnValue(mixed $value): void
 Get a record by key
 
 ```php
-public record(int $key): array
+public record(int $key): \MammothPHP\WoollyM\Record
 ```
 
 
@@ -455,6 +455,33 @@ public export(): \MammothPHP\WoollyM\DataFrame
 **Throws:**
 
 - [`InvalidSelectException`](../../Exceptions/InvalidSelectException.md)
+
+
+
+***
+
+### groupBy
+
+
+
+```php
+public groupBy(string|\MammothPHP\WoollyM\Stats\AggProvider $args): \MammothPHP\WoollyM\DataFrame
+```
+
+
+
+
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$args` | **string&#124;\MammothPHP\WoollyM\Stats\AggProvider** |  |
+
+
 
 
 
@@ -504,4 +531,4 @@ public countRecords(): int
 
 
 ***
-> Automatically generated on 2024-04-24
+> Automatically generated on 2024-07-03

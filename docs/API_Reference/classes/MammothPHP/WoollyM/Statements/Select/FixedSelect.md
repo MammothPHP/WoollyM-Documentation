@@ -23,7 +23,7 @@
 Get a record by key
 
 ```php
-public record(int $key): array
+public record(int $key): \MammothPHP\WoollyM\Record
 ```
 
 
@@ -66,6 +66,33 @@ public export(): \MammothPHP\WoollyM\DataFrame
 **Throws:**
 
 - [`InvalidSelectException`](../../Exceptions/InvalidSelectException.md)
+
+
+
+***
+
+### groupBy
+
+
+
+```php
+public groupBy(string|\MammothPHP\WoollyM\Stats\AggProvider $args): \MammothPHP\WoollyM\DataFrame
+```
+
+
+
+
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$args` | **string&#124;\MammothPHP\WoollyM\Stats\AggProvider** |  |
+
+
 
 
 
@@ -115,4 +142,4 @@ public countRecords(): int
 
 
 ***
-> Automatically generated on 2024-04-24
+> Automatically generated on 2024-07-03

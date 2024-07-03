@@ -13,12 +13,12 @@
 ## Methods
 
 
-### usort
+### uasort
 
 
 
 ```php
-public usort(\Closure $callback): void
+public uasort(\Closure $callback): void
 ```
 
 
@@ -42,4 +42,4 @@ public usort(\Closure $callback): void
 
 
 ***
-> Automatically generated on 2024-04-24
+> Automatically generated on 2024-07-03

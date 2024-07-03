@@ -1,25 +1,46 @@
 ***
 
-# JSON
+# XLSX
 
 
 
 
 
-* Full name: `\MammothPHP\WoollyM\IO\JSON`
+* Full name: `\MammothPHP\WoollyM\IO\XLSX`
 * Parent class: [`\MammothPHP\WoollyM\IO\Builder`](./Builder.md)
 
 
+## Constants
+
+| Constant | Visibility | Type | Value |
+|:---------|:-----------|:-----|:------|
+|`DEFAULT_SHEET_NAME`|public| |null|
+|`DEFAULT_COLROW`|public| |1|
 
 ## Properties
 
 
-### jsonItems
+### sheetName
 
 
 
 ```php
-public \JsonMachine\Items $jsonItems
+public ?string $sheetName
+```
+
+
+
+
+
+
+***
+
+### colRow
+
+
+
+```php
+public int $colRow
 ```
 
 
@@ -59,12 +80,101 @@ public import(\MammothPHP\WoollyM\DataFrame $to = new DataFrame()): \MammothPHP\
 
 ***
 
-### toFile
+### format
 
-Encodes a DataFrame into a JSON file
+
 
 ```php
-public toFile(string|\SplFileInfo $file, bool $overwriteFile = false, bool $pretty = false): void
+public format(?string $sheetName = self::DEFAULT_SHEET_NAME, mixed $colRow = self::DEFAULT_COLROW): static
+```
+
+
+
+
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$sheetName` | **?string** |  |
+| `$colRow` | **mixed** | - Parse data after specified line (starting at 1), and consider this line at the header. Set to 0 for no header. |
+
+
+
+
+
+***
+
+### loadFile
+
+Loads the file which the CSV class was instantiated with.
+
+```php
+protected loadFile(string $file): array
+```
+
+
+
+
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$file` | **string** |  |
+
+
+
+
+**Throws:**
+
+- [`UnknownOptionException`](../Exceptions/UnknownOptionException.md)
+
+- [`Exception`](../../../PhpOffice/PhpSpreadsheet/Exception.md)
+
+
+
+***
+
+### getWriter
+
+
+
+```php
+protected getWriter(\PhpOffice\PhpSpreadsheet\Spreadsheet $spreadsheet): \PhpOffice\PhpSpreadsheet\Writer\BaseWriter
+```
+
+
+
+
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$spreadsheet` | **\PhpOffice\PhpSpreadsheet\Spreadsheet** |  |
+
+
+
+
+
+***
+
+### toFile
+
+Write an Excel file
+
+```php
+public toFile(string|\SplFileInfo $file, bool $overwriteFile = false, string $worksheetTitle = &#039;DataFrame&#039;): void
 ```
 
 
@@ -80,7 +190,7 @@ public toFile(string|\SplFileInfo $file, bool $overwriteFile = false, bool $pret
 |-----------|------|-------------|
 | `$file` | **string&#124;\SplFileInfo** |  |
 | `$overwriteFile` | **bool** |  |
-| `$pretty` | **bool** |  |
+| `$worksheetTitle` | **string** |  |
 
 
 
@@ -88,93 +198,12 @@ public toFile(string|\SplFileInfo $file, bool $overwriteFile = false, bool $pret
 
 ***
 
-### toString
+### toExcelSpreadsheet
 
-Encodes a DataFrame array into a JSON string.
-
-```php
-public toString(bool $pretty = false): string
-```
-
-pretty: Will "prettify" the rendered JSON (default: false)
-
-
-
-
-
-
-**Parameters:**
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `$pretty` | **bool** |  |
-
-
-
-
-**Throws:**
-
-- [`NotYetImplementedException`](../Exceptions/NotYetImplementedException.md)
-
-- [`UnknownOptionException`](../Exceptions/UnknownOptionException.md)
-
-
-
-***
-
-### itemsFromFile
-
-Decodes a JSON string into a DataFrame array.
+Converts the columns and data passed to an XLSX worksheet and adds that worksheet to an instance of PHPExcel
 
 ```php
-protected itemsFromFile(): void
-```
-
-
-
-
-
-
-
-
-
-
-
-**Throws:**
-
-- [`UnknownOptionException`](../Exceptions/UnknownOptionException.md)
-
-
-
-***
-
-### itemsFromString
-
-
-
-```php
-protected itemsFromString(): void
-```
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-### importFromJsonItems
-
-
-
-```php
-protected importFromJsonItems(\MammothPHP\WoollyM\DataFrame $df): void
+public toExcelSpreadsheet(\PhpOffice\PhpSpreadsheet\Spreadsheet $spreadsheet, string $worksheetTitle = &#039;DataFrame&#039;): \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet
 ```
 
 
@@ -188,9 +217,15 @@ protected importFromJsonItems(\MammothPHP\WoollyM\DataFrame $df): void
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$df` | **\MammothPHP\WoollyM\DataFrame** |  |
+| `$spreadsheet` | **\PhpOffice\PhpSpreadsheet\Spreadsheet** |  |
+| `$worksheetTitle` | **string** |  |
 
 
+
+
+**Throws:**
+
+- [`Exception`](../../../PhpOffice/PhpSpreadsheet/Exception.md)
 
 
 

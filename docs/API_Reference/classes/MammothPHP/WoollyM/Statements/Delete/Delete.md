@@ -73,7 +73,7 @@ public record(int $key): \MammothPHP\WoollyM\DataFrame
 Remove record if closure return true
 
 ```php
-public filter( $f): \MammothPHP\WoollyM\DataFrame
+public filter(mixed $f): \MammothPHP\WoollyM\DataFrame
 ```
 
 
@@ -87,7 +87,7 @@ public filter( $f): \MammothPHP\WoollyM\DataFrame
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$f` | **** | - ex: fn(array recordData, int $recordKey): bool =&gt; ... |
+| `$f` | **mixed** | - ex: fn(array recordData, int $recordKey): bool =&gt; ... |
 
 
 
@@ -97,4 +97,4 @@ public filter( $f): \MammothPHP\WoollyM\DataFrame
 
 
 ***
-> Automatically generated on 2024-04-24
+> Automatically generated on 2024-07-03
