@@ -5,36 +5,34 @@ Example with a basic size function counting each field in records from a stateme
 ```php
 use MammothPHP\WoollyM\DataFrame;
 use MammothPHP\WoollyM\Stats\Modules;
-use MammothPHP\WoollyM\Statements\Select\Select;
-use MammothPHP\WoollyM\Stats\{StatsMethodInterface, StatsPropertyInterface};
+use MammothPHP\WoollyM\Stats\Helpers\AbstractAgg;
 
-Modules::registerModule(
-    new class implements StatsMethodInterface, StatsPropertyInterface
+use MammothPHP\WoollyM\Stats\Helpers\AbstractAgg;
+
+class SumOdd extends AbstractAgg
+{
+    public const string NAME = 'sumOdd';
+
+    public function addValue(mixed $value): void
     {
-        public const string NAME = 'size';
-
-        public function executeProperty(Select $select): int
-        {
-            return $this->execute($select);
+        if ($value === true) {
+            $value = 1;
         }
 
-        public function executeMethod(Select $select, array $arguments): int
-        {
-            return $this->execute($select, ...$arguments);
-        }
-
-        protected function execute(Select $select): int
-        {
-            $r = 0;
-
-            foreach ($select as $record) {
-                $r += count($record);
+        if (!empty($value) && is_numeric($value)) {
+            if (\is_string($value) && ctype_digit($value)) {
+                $value = \intval($value);
+            } elseif (!\is_int($value)) {
+                $value = \floatval($value);
             }
 
-            return $r;
+        if($value % 2 !== 0) 
+            $this->agg += $value;
         }
     }
-);
+}
+
+Modules::registerModule(SumOdd::class);
 
 
 // Use it!
@@ -42,10 +40,10 @@ Modules::registerModule(
 $df = new DataFrame([
     ['colA' => 42, 'colB' => 7 , 'colC' => 8],
     ['colA' => 77, 'colB' => 7 , 'colC' => 42],
-    ['colA' => 77, 'colB' => 7 , 'colC' => 8],
+    ['colA' => 77, 'colB' => 9 , 'colC' => 8],
     ['colA' => 42, 'colB' => 7 , 'colC' => 42],
-    ['colA' => 77, 'colB' => 7 , 'colC' => 8],
+    ['colA' => 77, 'colB' => 8 , 'colC' => 8],
 ]);
 
-$df->select('colA', 'colC')->whereColumn('colA', equal: 42)->size(); // 2
+$df->select('colB')->sumOdd(); // 30 (7+7+9+7)
 ```
