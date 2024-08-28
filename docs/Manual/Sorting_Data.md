@@ -1,11 +1,11 @@
 # Sorting
 _Sorting can be incompatible with some drivers. And some of them could be accelerated by some compatible drivers._
 
-## sortRecordsByColumns
+## Order by records
 Sort record ascending / descing by column(s).
 ```php
-$df->sortRecordsByColumns(by: 'colA', ascending: true);
-$df->sortRecordsByColumns(by: ['colA', 'colB'], ascending: true); // By colA then colB
+$df->orderBy('colA'); // implicit ascending order
+$df->OrderBy(Desc::col('colA'), Asc::('colB')); // By colA descending then colB ascending
 ```
 
 ## sortColumn
