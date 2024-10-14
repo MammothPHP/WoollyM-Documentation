@@ -1,7 +1,7 @@
 # Delete
 
 ```php
-$df->removeRecord(key: 42);
+$df->deleteRecord(key: 42);
 
 // equivalent
 unset($df[42]);
